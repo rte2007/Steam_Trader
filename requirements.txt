@@ -1,0 +1,8 @@
+aiohttp
+cloudscraper
+cryptography
+openpyxl
+python-dotenv
+pysteamauth
+requests
+steampy

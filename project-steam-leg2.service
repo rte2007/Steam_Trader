@@ -1,0 +1,17 @@
+[Unit]
+Description=Project Steam leg 2 - DMarket to MARKET ORDER (Rust)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/steam-skin-trader
+EnvironmentFile=/opt/steam-skin-trader/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/steam-skin-trader/.venv/bin/python -u /opt/steam-skin-trader/dm_market_leg2.py
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=30
+
+[Install]
+WantedBy=multi-user.target

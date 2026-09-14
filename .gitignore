@@ -1,0 +1,37 @@
+# Credentials and authentication material
+.env
+.env.*
+!.env.example
+config.json
+config.*.json
+private/
+*.maFile
+*.session
+*.session-journal
+steam_cookies.json
+steam_web_session.json
+.cstrade_session
+.skinstable_session
+.mannco_jwt
+
+# Runtime state and private market data
+*_state.json
+*_control.json
+*_cache.json
+trade_log.xlsx
+*.log
+
+# Python and editor files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+.vscode/
+
+# Local captures and exports
+*.png
+*.jpg
+*.html
+*.csv

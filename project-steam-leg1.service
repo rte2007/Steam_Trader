@@ -1,0 +1,17 @@
+[Unit]
+Description=Project Steam LIS-SKINS to DMarket Order
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/steam-skin-trader
+EnvironmentFile=/opt/steam-skin-trader/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/steam-skin-trader/.venv/bin/python -u /opt/steam-skin-trader/arb_bot_ls.py
+Restart=on-failure
+RestartSec=15
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

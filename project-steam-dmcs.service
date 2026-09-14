@@ -1,0 +1,18 @@
+[Unit]
+Description=Project Steam - DMarket to MARKET ORDER (CS2)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/steam-skin-trader
+EnvironmentFile=/opt/steam-skin-trader/.env
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/steam-skin-trader/.venv/bin/python -u /opt/steam-skin-trader/dm_market_cs2.py
+Restart=on-failure
+RestartSec=15
+TimeoutStopSec=30
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
